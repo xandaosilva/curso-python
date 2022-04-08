@@ -1,0 +1,6 @@
+print("Primeira mensagem enviada")
+print('Segunda mensagem enviada')
+print("Terceira 'mensagem' enviada")
+print("Quarta \"mensagem\" enviada")
+print("Quinta mensagem \n enviada")
+print(r"Sexta mensagem \n enviada")
