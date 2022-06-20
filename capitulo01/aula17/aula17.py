@@ -13,7 +13,3 @@ while y <= 5:
         break
 
     y += 1
-
-
-while True:
-    print("Estou com fome !!!")
