@@ -1,6 +1,6 @@
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 
-listA = text.split(" ");
+listA = text.split(" ")
 listB = text.split(",")
 listC = "#".join(text)
 
