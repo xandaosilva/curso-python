@@ -4,7 +4,7 @@ listA = text.split(" ")
 listB = text.split(",")
 listC = "#".join(text)
 
-a, b, c, *listD = text;
+a, b, c, *listD = text
 
 print(listA)
 print(listB)

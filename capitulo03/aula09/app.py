@@ -8,10 +8,7 @@ list_f = [variable for variable in list_ab if variable % 3 == 0 if variable % 8 
 list_g = [f"{variable} é divisível por 3" if variable % 3 == 0 else f"{variable} não é divisível por 3" for variable in list_ab]
 list_h = [f"{variable} é divisível por 3 e 8" if variable % 3 == 0 and variable % 8 == 0 else f"{variable} não é divisível por 3 e 8" for variable in list_ab]
 
-print(list_b)
-print(list_c)
-print(list_d)
-print(list_e)
-print(list_f)
-print(list_g)
-print(list_h)
+list_expressions = [list_a, list_ab, list_b, list_c, list_d, list_e, list_f, list_g, list_h]
+
+for expression in list_expressions:
+    print(f"List generated: {expression}")

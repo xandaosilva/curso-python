@@ -1,27 +1,26 @@
 numero = input("Digite um número: ")
 
-if(numero.isdigit()):
+if numero.isdigit():
     numero = int(numero)
-    if (numero % 2 == 0):
-        print(f"{numero} é par")
-    else:
-        print(f"{numero} é ímpar")
+    res = (f"{numero} é par") if numero % 2 == 0 else (f"{numero} é ímpar")
+    print(res)
 else:
     print(f"{numero} não é um valor inteiro")
 
 hora = input("Digite o horário desejado: ")
 
-if(hora.isdigit()):
-    hora = int(hora)
+if hora.isdigit():
+    hora, msg = int(hora), ""
     if(hora < 0 or hora > 23):
-        print("Informe o horário corretamente")
+        msg = "Informe o horário corretamente"
     else:
         if(hora < 12):
-            print("Bom dia")
+            msg = "Bom dia"
         elif(hora < 18):
-            print("Boa tarde")
+            msg = "Boa tarde"
         else:
-            print("Boa noite")
+            msg = "Boa noite"
+    print(msg)
 else:
     print("Horário inválido")
 
