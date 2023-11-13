@@ -1,0 +1,3 @@
+teste file mixin (LogFileMixin)
+Erro: teste file mixin erro (LogFileMixin)
+Sucesso: teste file mixin sucesso (LogFileMixin)
