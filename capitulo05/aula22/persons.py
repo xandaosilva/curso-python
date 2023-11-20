@@ -1,3 +1,5 @@
+import accounts
+
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -19,4 +21,15 @@ class Person:
     def age(self, age):
         self._age = age
 
+    def __str__(self) -> str:
+        return f"Informações do cliente\nNome: {self._name}\nIdade: {self._age}"
 
+
+class Client(Person):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+        self.account: accounts.Account | None = None
+
+    def __str__(self) -> str:
+        return f"{super().__str__()}\n{self.account}"
+    

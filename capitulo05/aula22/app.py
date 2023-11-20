@@ -1,4 +1,5 @@
 from accounts import SavingAccount, CurrentAccount
+from persons import Client
 
 sa1 = SavingAccount(123, 1, 300)
 
@@ -15,3 +16,9 @@ ca1.deposit(2000)
 ca1.withdraw(3200)
 
 print(ca1)
+
+client1 = Client("Alexandre", 30)
+client1.account = sa1
+
+print(client1)
+
