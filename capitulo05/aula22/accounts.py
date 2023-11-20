@@ -16,6 +16,9 @@ class Account(abc.ABC):
     def details(self, message=""):
         print(f"{message} O seu saldo atual é R${self.balance:.2f}")
 
+    def __repr__(self):
+        return f"{type(self).__name__}({self.agency}, {self.account_number}, {self.balance})"
+
     def __str__(self) -> str:
         return f"Informações da conta\nAgência: {self.agency}\nConta: {self.account_number}\nSaldo: R${self.balance:.2f}"
 

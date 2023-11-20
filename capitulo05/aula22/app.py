@@ -1,24 +1,27 @@
 from accounts import SavingAccount, CurrentAccount
 from persons import Client
+from bank import Bank
 
-sa1 = SavingAccount(123, 1, 300)
+saving_account = SavingAccount(123, 1, 300)
+saving_account.deposit(700)
+saving_account.deposit(1000)
+saving_account.withdraw(1700)
+saving_account.withdraw(5000)
+print(saving_account)
 
-sa1.deposit(700)
-sa1.deposit(1000)
-sa1.withdraw(1700)
-sa1.withdraw(5000)
+current_account = CurrentAccount(456, 100, 1000, 100)
+current_account.deposit(2000)
+current_account.withdraw(3200)
+print(current_account)
 
-print(sa1)
+client = Client("Alexandre", 30)
+client.account = saving_account
+print(client)
 
-ca1 = CurrentAccount(456, 100, 1000, 100)
+bank1 = Bank()
+bank1.clients.extend([client])
+bank1.accounts.extend([current_account, saving_account])
+bank1.agencies.extend([123, 456])
+print(bank1)
 
-ca1.deposit(2000)
-ca1.withdraw(3200)
-
-print(ca1)
-
-client1 = Client("Alexandre", 30)
-client1.account = sa1
-
-print(client1)
-
+print(bank1.authenticate(client, saving_account))

@@ -21,6 +21,9 @@ class Person:
     def age(self, age):
         self._age = age
 
+    def __repr__(self) -> str:
+        return f"{type(self).__name__}({self._name}, {self._age})"
+
     def __str__(self) -> str:
         return f"Informações do cliente\nNome: {self._name}\nIdade: {self._age}"
 
