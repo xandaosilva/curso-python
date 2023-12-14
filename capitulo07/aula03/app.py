@@ -1,5 +1,6 @@
 import sys
 from main_window import MainWindow
+from buttons import Button
 from display import Display
 from info import Info
 from PySide6.QtGui import QIcon
@@ -20,6 +21,9 @@ if __name__ == "__main__":
 
     display = Display()
     window.addWidgetToVLayout(display)
+
+    button = Button("Clique aqui")
+    window.addWidgetToVLayout(button)
 
     window.adjustFixedSize()
     window.show()
