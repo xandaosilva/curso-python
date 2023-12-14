@@ -1,6 +1,6 @@
 import sys
 from main_window import MainWindow
-from buttons import Button
+from buttons import ButtonsGrid
 from display import Display
 from info import Info
 from PySide6.QtGui import QIcon
@@ -22,8 +22,9 @@ if __name__ == "__main__":
     display = Display()
     window.addWidgetToVLayout(display)
 
-    button = Button("Clique aqui")
-    window.addWidgetToVLayout(button)
+    buttonsGrid = ButtonsGrid()
+    buttonsGrid._makeGrid()
+    window.v_layout.addLayout(buttonsGrid)
 
     window.adjustFixedSize()
     window.show()
