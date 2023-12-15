@@ -16,13 +16,13 @@ if __name__ == "__main__":
 
     app.setWindowIcon(icon)
 
-    info = Info("2.0 ^ 10.0 = 1024")
+    info = Info("Operação")
     window.addWidgetToVLayout(info)
 
     display = Display()
     window.addWidgetToVLayout(display)
 
-    buttonsGrid = ButtonsGrid(display)
+    buttonsGrid = ButtonsGrid(display, info)
     buttonsGrid._makeGrid()
     window.v_layout.addLayout(buttonsGrid)
 
