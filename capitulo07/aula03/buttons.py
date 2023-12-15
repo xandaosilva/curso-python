@@ -1,6 +1,6 @@
 from typing import Optional
 from PySide6.QtWidgets import QPushButton, QGridLayout
-from variables import FONT_SIZE_MD
+from variables import FONT_SIZE_MD, FONT_SIZE_SM
 from utils import isEmpty, isNumOrDot
 
 class Button(QPushButton):
@@ -10,9 +10,9 @@ class Button(QPushButton):
 
     def configStyle(self):
         font = self.font()
-        font.setPixelSize(FONT_SIZE_MD)
+        font.setPixelSize(FONT_SIZE_SM)
         self.setFont(font)
-        self.setMinimumSize(75, 75)
+        self.setMinimumSize(50, 50)
 
 
 class ButtonsGrid(QGridLayout):
