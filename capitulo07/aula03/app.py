@@ -22,7 +22,7 @@ if __name__ == "__main__":
     display = Display()
     window.addWidgetToVLayout(display)
 
-    buttonsGrid = ButtonsGrid(display, info)
+    buttonsGrid = ButtonsGrid(display, info, window)
     buttonsGrid._makeGrid()
     window.v_layout.addLayout(buttonsGrid)
 
