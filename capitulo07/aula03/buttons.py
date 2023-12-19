@@ -77,6 +77,9 @@ class ButtonsGrid(QGridLayout):
         
         if text in "=":
             self._connectButtonClicked(button, self._eq)
+        
+        if text in "◀":
+            self._connectButtonClicked(button, self.display.backspace)
 
     def _makeSlot(self, func, *args, **kwargs):
         @Slot(bool)
