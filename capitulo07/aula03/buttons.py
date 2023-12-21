@@ -136,9 +136,9 @@ class ButtonsGrid(QGridLayout):
             else:
                 result = eval(self.equation)
         except ZeroDivisionError:
-            print("Impossível dividir por Zero")
+            self._showError("Impossível dividir por Zero")
         except OverflowError:
-            print("Número extenso")
+            self._showInfo("Número extenso")
 
         self.display.clear()
         self.info.setText(f"{self.equation} = {result}")
@@ -148,8 +148,17 @@ class ButtonsGrid(QGridLayout):
         if result == "error":
             self._left = None
 
-    def _showError(self, text):
+    def _makeDialog(self, text):
         msgBox = self.window.makeMsgBox()
         msgBox.setText(text)
-        msgBox.setIcon(msgBox.Icon.Warning)
+        return msgBox
+
+    def _showError(self, text):
+        msgBox = self._makeDialog(text)
+        msgBox.setIcon(msgBox.Icon.Critical)
+        msgBox.exec()
+    
+    def _showInfo(self, text):
+        msgBox = self._makeDialog(text)
+        msgBox.setIcon(msgBox.Icon.Information)
         msgBox.exec()
